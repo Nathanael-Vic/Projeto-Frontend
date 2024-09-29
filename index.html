@@ -7,16 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barra de navegação -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Cultura</a></li>
-                <li><a href="#">Culinária</a></li>
-                <li><a href="#">História</a></li>
-                <li><a href="#">Personalidades</a></li>
-            </ul>
-        </nav>
+    <header>  
+    <table>
+        <tr>
+            <td width="55%">
+                <img src="Imagens/logo.png" alt="Logo" style="max-width: 80px;"> 
+            </td>
+            <td>
+                <nav>
+                    <ul>
+                        <li><a href="#">Cultura</a></li>
+                        <li><a href="#">Culinária</a></li>
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Personalidades</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+
+    </table>  
     </header>
 
     <!-- Seção principal -->
@@ -56,5 +65,16 @@
         </div>
     </footer>
 
+    <script>
+        const scrollButton = document.getElementById('scroll-button');
+        const highlightSection = document.getElementById('highlight-section');
+
+        scrollButton.addEventListener('click', () => {
+            // Verifique se os elementos foram encontrados
+            if (scrollButton && highlightSection) {
+                highlightSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
 </body>
 </html>
